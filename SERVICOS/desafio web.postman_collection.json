@@ -1,0 +1,115 @@
+{
+	"info": {
+		"_postman_id": "8d02e1d7-538b-4eef-a552-8a86a8fc0d86",
+		"name": "desafio web",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Criar Contato",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"markus\",\r\n  \"last_name\": \"batista\",\r\n  \"email\": \"markus@gmail.com\",\r\n  \"age\": \"28\",\r\n  \"phone\": \"21984759570\",\r\n  \"address\": \"Rua dois\",\r\n  \"state\": \"Minas Gerais\",\r\n  \"city\": \"Belo Horizonte\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api-de-tarefas.herokuapp.com/contacts",
+					"protocol": "https",
+					"host": [
+						"api-de-tarefas",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"contacts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar contatos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api-de-tarefas.herokuapp.com/contacts",
+					"protocol": "https",
+					"host": [
+						"api-de-tarefas",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"contacts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Editar Contato",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": 1894,\r\n  \"name\": \"suzan\",\r\n  \"last_name\": \"batista\",\r\n  \"email\": \"suzan@gmail.com\",\r\n  \"age\": \"28\",\r\n  \"phone\": \"21984759575\",\r\n  \"address\": \"Rua dois\",\r\n  \"state\": \"Minas Gerais\",\r\n  \"city\": \"Belo Horizonte\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api-de-tarefas.herokuapp.com/contacts/1845",
+					"protocol": "https",
+					"host": [
+						"api-de-tarefas",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"contacts",
+						"1845"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Deletar Contato",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/vnd.tasksmanager.v2",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://api-de-tarefas.herokuapp.com/contacts/1894",
+					"protocol": "https",
+					"host": [
+						"api-de-tarefas",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"contacts",
+						"1894"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
